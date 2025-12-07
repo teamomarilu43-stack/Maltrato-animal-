@@ -3,20 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>No al Maltrato Animal – Diarios reales</title>
+<title>No al Maltrato Animal</title>
 <style>
-body{margin:0;font-family:Arial;background:#f8f8f8;color:#222;line-height:1.6}
-.sidebar{position:fixed;left:0;top:0;width:260px;height:100%;background:#6a1b9a;color:white;padding:90px 20px 20px;box-sizing:border-box;overflow-y:auto}
-.sidebar h2{margin:0 0 40px;font-size:26px;text-align:center}
-.sidebar a{color:white;display:block;padding:16px 0;font-size:20px;text-decoration:none;border-bottom:1px solid #8a3ab8}
-.sidebar a:hover{background:#8a3ab8}
-.content{margin-left:280px;padding:40px}
-h1,h2,h3{color:#6a1b9a}
-.diario{background:white;padding:30px;margin:30px 0;border-radius:18px;box-shadow:0 6px 20px rgba(0,0,0,0.1)}
-.diario img{max-width:100%;border-radius:15px;margin:20px 0}
-.bizum{background:#6a1b9a;color:white;padding:30px;text-align:center;border-radius:20px;font-size:24px;margin:40px 0}
-.menu-btn{position:fixed;top:15px;left:15px;font-size:35px;background:none;border:none;color:#6a1b9a;z-index:999}
-@media(max-width:768px){.sidebar{transform:translateX(-100%);transition:.4s}.sidebar.open{transform:translateX(0)}.content{margin-left:0;padding-top:70px}}
+  body{margin:0;font-family:Arial,sans-serif;background:#f8f8f8;color:#333}
+  .sidebar{position:fixed;left:0;top:0;width:280px;height:100%;background:#6a1b9a;color:white;padding:100px 20px 20px;box-sizing:border-box;overflow-y:auto;z-index:100}
+  .sidebar h1{font-size:28px;text-align:center;margin:0 0 50px}
+  .sidebar a{color:white;display:block;padding:18px 0;font-size:21px;text-decoration:none;border-bottom:1px solid #8a3ab8}
+  .sidebar a:hover{background:#8a3ab8}
+  .content{margin-left:280px;padding:40px;min-height:100vh}
+  .hero{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white}
+  .hero h1{font-size:50px;margin:0}
+  .hero p{font-size:24px;margin:20px 0}
+  .btn{background:#ff6b6b;color:white;padding:15px 30px;border:none;border-radius:50px;font-size:20px;cursor:pointer}
+  section{padding:60px 20px;max-width:1000px;margin:0 auto}
+  .diario{background:white;padding:30px;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,0.1);margin:30px 0}
+  .diario img{max-width:100%;border-radius:15px;margin:20px 0}
+  .menu-btn{display:none}
+  @media(max-width:768px){
+    .sidebar{transform:translateX(-100%);transition:.4s}
+    .sidebar.open{transform:translateX(0)}
+    .content{margin-left:0;padding-top:80px}
+    .menu-btn{display:block;position:fixed;top:20px;left:20px;font-size:35px;background:#6a1b9a;color:white;padding:10px 15px;border-radius:50%;z-index:999}
+  }
 </style>
 </head>
 <body>
@@ -24,37 +32,46 @@ h1,h2,h3{color:#6a1b9a}
 <button class="menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
 
 <nav class="sidebar">
-<h2>NO AL MALTRATO</h2>
-<a href="#inicio">Inicio</a>
-<a href="#diarios">Diarios</a>
-<a href="#adopcion">Adopción</a>
-<a href="#donaciones">Donaciones</a>
-<a href="#encuestas">Encuestas</a>
-<a href="#reflexion">Reflexión</a>
-<a href="#videos">Vídeos</a>
-<a href="#fotos">Fotos</a>
+  <h1>NO AL MALTRATO</h1>
+  <a href="#inicio">Inicio</a>
+  <a href="#diarios">Diarios</a>
+  <a href="#adopcion">Adopción</a>
+  <a href="#donaciones">Donaciones</a>
+  <a href="#encuestas">Encuestas</a>
+  <a href="#reflexion">Reflexión</a>
+  <a href="#videos">Vídeos</a>
+  <a href="#fotos">Fotos</a>
 </nav>
 
+<div class="hero" id="inicio">
+  <div>
+  <h1>Una vida no se tira</h1>
+  <p>Cada historia cuenta. Cada rescate importa.</p>
+  <button class="btn" onclick="location.href='#diarios'">VER CASOS REALES</button>
+</div>
+
 <main class="content">
-<section id="inicio">
-<h1>Diarios reales contra el Maltrato Animal</h1>
-<p>Estas son las anotaciones escritas a mano, día a día. Cada historia es 100 % real.</p>
-<div class="bizum">Ayúdanos con Bizum al [tu móvil]</div>
-</section>
 
 <section id="diarios">
-<h2>DIARIOS REALES</h2>
-<div class="diario"><h3>30 septiembre 2024 – Caso Nino</h3><img src="IMG-20251206-WA0009.jpg" alt="Caso Nino"><p>Perro muy flaco atado 24h sin comida ni agua. El dueño amenaza con matarlo. Llamada a policía.</p></div>
-<div class="diario"><h3>1-2 octubre 2025 – 10 perros encerrados</h3><img src="IMG-20251206-WA0010.jpg" alt="10 perros encerrados"><p>Más de 10 perros sin agua ni comida, con sarna y heridas. Fueron decomisados.</p></div>
-<div class="diario"><h3>Más casos</h3><img src="IMG-20251206-WA0011.jpg"><img src="IMG-20251206-WA0012.jpg"><img src="IMG-20251206-WA0013.jpg"><img src="IMG-20251206-WA0014.jpg"><img src="IMG-20251206-WA0015.jpg"></div>
+  <h2>DIARIOS REALES</h2>
+  <div class="diario">
+    <h3>30 septiembre 2024 – Caso Nino</h3>
+    <img src="IMG-20251206-WA0009.jpg">
+    <p>Perro muy flaco atado 24h sin comida ni agua…</p>
+  </div>
+  <div class="diario">
+    <h3>1-2 octubre 2025 – 10 perros encerrados</h3>
+    <img src="IMG-20251206-WA0010.jpg">
+    <p>Más de 10 perros sin agua ni comida… Fueron decomisados.</p>
+  </div>
+  <div class="diario">
+    <h3>Más casos reales</h3>
+    <img src="IMG-20251206-WA0011.jpg"><img src="IMG-20251206-WA0012.jpg"><img src="IMG-20251206-WA0013.jpg"><img src="IMG-20251206-WA0014.jpg"><img src="IMG-20251206-WA0015.jpg">
+  </div>
 </section>
 
-<section id="adopcion"><h2>Adopción</h2><p>Próximamente…</p></section>
-<section id="donaciones"><h2>Donaciones</h2><p>Puedes ayudar con Bizum al [tu móvil]</p></section>
-<section id="encuestas"><h2>Encuestas</h2><p>Próximamente…</p></section>
-<section id="reflexion"><h2>Reflexión</h2><p>Cada animal cuenta. Tú puedes cambiar su historia.</p></section>
-<section id="videos"><h2>Vídeos</h2><p>Próximamente…</p></section>
-<section id="fotos"><h2>Fotos</h2><p>Próximamente…</p></section>
+<!-- El resto de secciones las vamos rellenando cuando quieras -->
+
 </main>
 </body>
-</html>
+  </html>
